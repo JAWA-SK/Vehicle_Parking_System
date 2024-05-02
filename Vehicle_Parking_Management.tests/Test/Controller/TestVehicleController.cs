@@ -10,7 +10,7 @@ namespace Vehicle_Parking_Management.tests.Test.Controller
     public class TestVehicleController
     {
         [Fact]
-        public async Task shouldReturnOn_getAllVehicle_Instance()
+        public async Task ShouldReturnOn_GetAllVehicle_AndStatusAs200()
         {
             var mockVehicleService =new Mock<IVehicleService>();
             mockVehicleService.Setup(service => service.getAllVehicles()).
@@ -28,10 +28,10 @@ namespace Vehicle_Parking_Management.tests.Test.Controller
 
         }
         [Fact]
-        public async Task shouldReturnOn_NoVehicleFound_AndStatusAs400()
+        public async Task ShouldReturnOn_NoVehicleFound_AndStatusAs400()
         {
             var mockVehicleService = new Mock<IVehicleService>();
-            mockVehicleService.Setup(service => service.getAllVehicles()).
+              mockVehicleService.Setup(service => service.getAllVehicles()).
                 ReturnsAsync(new List<Vehicle>());
 
             var testController = new VehicleController(mockVehicleService.Object);
@@ -45,7 +45,7 @@ namespace Vehicle_Parking_Management.tests.Test.Controller
         }
 
         [Fact]
-        public async Task shoudlReturnOn_getVehicleById_AndStatusAs200()
+        public async Task ShoudlReturnOn_GetVehicleById_AndStatusAs200()
         {
             var mockVehicleService = new Mock<IVehicleService>();
             var testVehicleId ="1";
@@ -63,7 +63,7 @@ namespace Vehicle_Parking_Management.tests.Test.Controller
             objectResult.StatusCode.Should().Be(200);
         }
         [Fact]
-        public async Task shoudlReturnOn_VehicleNotFoundForId_AndStatusAs400()
+        public async Task ShoudlReturnOn_VehicleNotFoundForId_AndStatusAs400()
         {
             var mockVehicleService = new Mock<IVehicleService>();
             var testVehicleId = "1";
