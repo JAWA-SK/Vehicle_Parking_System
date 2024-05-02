@@ -6,7 +6,7 @@ namespace Vehicle_Parking_Management.Services
     {
         Task<List<Vehicle>> getAllVehicles();
 
-        Task<List<Vehicle>> getVehicles(string vehicleId);
+        Task<Vehicle?> getVehicle(string vehicleId);
 
 
     }

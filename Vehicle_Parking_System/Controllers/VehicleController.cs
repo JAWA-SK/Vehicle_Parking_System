@@ -4,7 +4,7 @@ using Vehicle_Parking_Management.Services;
 
 namespace Vehicle_Parking_Management
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class VehicleController : ControllerBase
     {
@@ -18,8 +18,16 @@ namespace Vehicle_Parking_Management
         [HttpGet("getAllVehicle")]
         public async Task<IActionResult> GetAllVehicle()
         {
-            var vehicle=await _vehicleService.getAllVehicles();
+           
             return Ok("success");
         }
+
+        [HttpGet("getVehicle")]
+
+        public async Task<IActionResult>GetVehicle(string vehicleId)
+        {
+            return Ok("success");
+        }
+
     }
 }

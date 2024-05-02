@@ -4,14 +4,16 @@ namespace Vehicle_Parking_Management.Services
 {
     public class VehicleService : IVehicleService
     {
-        public async Task<List<Vehicle>> getAllVehicles()
+        public Task<List<Vehicle>> getAllVehicles()
         {
-            return null;
+            throw new NotImplementedException();
         }
 
-        public async Task<List<Vehicle>> getVehicles(string vehicleId)
+        public Task<Vehicle?> getVehicle(string vehicleId)
         {
-            return null;
+            throw new NotImplementedException();
         }
+
+ 
     }
 }

@@ -2,6 +2,7 @@
 {
     public class Vehicle
     {
+        public string VehicleId { get; set; }
         public string VehicleType { get; set; }
 
         public string Floor { get; set; }
